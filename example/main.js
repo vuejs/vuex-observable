@@ -14,7 +14,10 @@ const store = new Vuex.Store({
     pong: state => state.pinging = false
   },
   actions: {
+    // convert an action into an observableAction
     ping: observableAction((action$, { commit }) => {
+      // first argument will be an observable representing
+      // the stream for "ping" actions
       action$.subscribe(() => commit('ping'))
       action$.delay(1000).subscribe(() => commit('pong'))
     })

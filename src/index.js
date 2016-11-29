@@ -5,12 +5,12 @@ export function observableAction (init) {
   const input$ = new Subject()
   const action$ = new ActionsObservable(input$)
 
-  let initialized = false
+  let $output
   return function observableAction (context, payload) {
-    if (!initialized) {
-      initialized = true
-      init(action$, context)
+    if (!$output) {
+      $output = init(action$, context)
     }
     input$.next(payload)
+    return $output
   }
 }
