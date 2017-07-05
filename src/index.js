@@ -1,4 +1,4 @@
-import { Subject } from 'rxjs/subject'
+import { Subject } from 'rxjs/Subject'
 import { ActionsObservable } from './ActionsObservable'
 
 export function observableAction (init) {
