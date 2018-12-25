@@ -1,4 +1,6 @@
-# vuex-observable
+# THIS REPOSITORY IS DEPRECATED
+
+## vuex-observable
 
 > Proof of Concept, DO NOT USE YET
 
